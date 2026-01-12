@@ -8,20 +8,25 @@
 /* BASE */
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  color: #000000;
+  background: radial-gradient(
+    circle at top,
+    #1b1b1b 0%,
+    #0f0f0f 60%,
+    #0a0a0a 100%
+  );
+  color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 32px 20px;
+  padding: 36px 20px;
 }
 
 /* HEADER */
 .brand {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 52px;
   animation: fadeUp 0.9s ease forwards;
 }
 
@@ -34,10 +39,10 @@ body {
 }
 
 .brand p {
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 0.9rem;
   font-weight: 300;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
   opacity: 0.75;
 }
 
@@ -47,7 +52,7 @@ body {
   max-width: 420px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
 }
 
 /* CARD */
@@ -55,44 +60,54 @@ body {
   all: unset;
   cursor: pointer;
   width: 100%;
-  padding: 18px 22px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 14px;
+  padding: 20px 24px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   gap: 18px;
-  background-color: #ffffff;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: linear-gradient(
+    145deg,
+    #1a1a1a,
+    #111111
+  );
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 /* HOVER */
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 /* ICON */
 .icon {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   object-fit: contain;
   flex-shrink: 0;
-  /* NO filtros → mantiene color */
+  /* Mantiene color original */
 }
 
 /* TEXT */
 .card span {
   font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
 }
 
 /* ANIMATIONS */
 .fade-in {
   opacity: 0;
-  transform: translateY(12px);
-  animation: fadeUp 0.8s ease forwards;
+  transform: translateY(14px);
+  animation: fadeUp 0.85s ease forwards;
 }
 
 .fade-in.delay {
@@ -108,6 +123,14 @@ body {
 
 /* MOBILE */
 @media (max-width: 480px) {
+  .brand h1 {
+    font-size: 1.7rem;
+  }
+
+  .card span {
+    font-size: 1.15rem;
+  }
+}@media (max-width: 480px) {
   .brand h1 {
     font-size: 1.7rem;
   }

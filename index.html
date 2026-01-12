@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú | Las Camelias</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -14,56 +16,44 @@
 
 <body>
 
-  <!-- LOADER -->
-  <div id="loader">
-    <img 
-      src="https://i.imgur.com/LOGO_CAMELIAS.png"
-      alt="Las Camelias"
-      class="logo-loader"
+  <!-- HEADER -->
+  <header class="brand">
+    <img
+      src="https://res.cloudinary.com/dlcsihevy/image/upload/f_auto,q_auto,w_400,c_fit,dpr_auto/v1768235281/images_2_zej8t5"
+      alt="Las Camelias Restaurante Bar"
+      class="logo-main"
     >
-    <span>Cargando experiencia...</span>
-  </div>
 
-  <!-- CONTENIDO -->
-  <main id="content" class="hidden">
+    <h1>Restaurante Bar<br>Mirador de las Camelias</h1>
+    <p>Cocina artesanal & bebidas especiales</p>
+  </header>
 
-    <section class="brand">
-      <img 
-        src="https://i.imgur.com/LOGO_CAMELIAS.png"
-        alt="Restaurante Bar Mirador de las Camelias"
-        class="logo-main"
+  <!-- OPCIONES -->
+  <main class="options">
+
+    <!-- CERvecería -->
+    <button class="card fade-in" onclick="goToMenu('cerveza')">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Poker_Beer_logo.png"
+        alt="Poker Beer"
+        class="icon"
       >
+      <span>Cervecería</span>
+    </button>
 
-      <h1>Restaurante Bar<br>Mirador de las Camelias</h1>
-      <p>Cocina artesanal & bebidas especiales</p>
-    </section>
-
-    <section class="options">
-
-      <!-- CERvecería -->
-      <button class="card" onclick="goToMenu('cerveza')">
-        <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Poker_Beer_logo.png"
-          alt="Poker Beer"
-          class="icon"
-        >
-        <span>Cervecería</span>
-      </button>
-
-      <!-- COCKTAILS -->
-      <button class="card" onclick="goToMenu('cocktails')">
-        <img 
-          src="https://cdn-icons-png.flaticon.com/512/3081/3081648.png"
-          alt="Margarita Cocktail"
-          class="icon"
-        >
-        <span>Cocktails</span>
-      </button>
-
-    </section>
+    <!-- COCKTAILS -->
+    <button class="card fade-in delay" onclick="goToMenu('cocktails')">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3081/3081648.png"
+        alt="Margarita Cocktail"
+        class="icon"
+      >
+      <span>Cocktails</span>
+    </button>
 
   </main>
 
+  <!-- JS -->
   <script src="menu.js"></script>
 </body>
 </html>

@@ -29,30 +29,19 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--white);
-  text-align: center;
+  gap: 1rem;
   z-index: 10;
 }
 
-#loader h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  margin-bottom: .5rem;
-}
-
-#loader span {
-  opacity: .85;
-  font-size: .95rem;
+.logo-loader {
+  width: 140px;
 }
 
 .hidden {
   display: none;
 }
 
-/* CONTENIDO */
-#content {
-  padding-bottom: 3rem;
-}
-
+/* HEADER */
 .brand {
   background: linear-gradient(180deg, var(--brown-gradient), var(--brown-dark));
   color: var(--white);
@@ -60,10 +49,15 @@ body {
   padding: 3rem 1.5rem 2.5rem;
 }
 
+.logo-main {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
 .brand h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.1rem;
-  margin-bottom: .8rem;
+  font-size: 2rem;
+  margin-bottom: .5rem;
 }
 
 .brand p {
@@ -71,21 +65,22 @@ body {
   font-size: .95rem;
 }
 
+/* OPCIONES */
 .options {
-  margin-top: -1.8rem;
+  margin-top: -1.6rem;
   padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.4rem;
 }
 
 .card {
   background: var(--white);
-  color: var(--brown-text);
   border-radius: 22px;
   padding: 1.6rem;
-  font-size: 1.2rem;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
   border: none;
   cursor: pointer;
   box-shadow: 0 12px 30px rgba(0,0,0,.15);
@@ -94,5 +89,15 @@ body {
 
 .card:hover {
   transform: translateY(-3px);
-  color: var(--red-accent);
+}
+
+.icon {
+  width: 48px;
+  height: auto;
+}
+
+.card span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--brown-text);
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selecciona Experiencia</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Pantalla de carga -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Contenido principal (invisible hasta que termine la animación) -->
+  <main id="main-content" class="hidden">
+    <section class="brand">
+      <h1>Restaurante Bar Mrador de Las Camelias</h1>
+      <p>Elige una experiencia</p>
+    </section>
+
+    <section class="options">
+      <button class="card cerveza" onclick="goToMenu('cerveza')">
+        <h2>Cervecería</h2>
+      </button>
+
+      <button class="card cocktails" onclick="goToMenu('cocktails')">
+        <h2>Cocktails</h2>
+      </button>
+    </section>
+  </main>
+
+  <script src="menu.js"></script>
+
+</body>
+</html>

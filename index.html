@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Selecciona Experiencia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú | Las Camelias</title>
 
   <link rel="stylesheet" href="styles.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- Pantalla de carga -->
+  <!-- LOADER -->
   <div id="loader">
-    <div class="spinner"></div>
+    <img 
+      src="https://i.imgur.com/LOGO_CAMELIAS.png"
+      alt="Las Camelias"
+      class="logo-loader"
+    >
+    <span>Cargando experiencia...</span>
   </div>
 
-  <!-- Contenido principal (invisible hasta que termine la animación) -->
-  <main id="main-content" class="hidden">
+  <!-- CONTENIDO -->
+  <main id="content" class="hidden">
+
     <section class="brand">
-      <h1>Restaurante Bar Mrador de Las Camelias</h1>
-      <p>Elige una experiencia</p>
+      <img 
+        src="https://i.imgur.com/LOGO_CAMELIAS.png"
+        alt="Restaurante Bar Mirador de las Camelias"
+        class="logo-main"
+      >
+
+      <h1>Restaurante Bar<br>Mirador de las Camelias</h1>
+      <p>Cocina artesanal & bebidas especiales</p>
     </section>
 
     <section class="options">
-      <button class="card cerveza" onclick="goToMenu('cerveza')">
-        <h2>Cervecería</h2>
+
+      <!-- CERvecería -->
+      <button class="card" onclick="goToMenu('cerveza')">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Poker_Beer_logo.png"
+          alt="Poker Beer"
+          class="icon"
+        >
+        <span>Cervecería</span>
       </button>
 
-      <button class="card cocktails" onclick="goToMenu('cocktails')">
-        <h2>Cocktails</h2>
+      <!-- COCKTAILS -->
+      <button class="card" onclick="goToMenu('cocktails')">
+        <img 
+          src="https://cdn-icons-png.flaticon.com/512/3081/3081648.png"
+          alt="Margarita Cocktail"
+          class="icon"
+        >
+        <span>Cocktails</span>
       </button>
+
     </section>
+
   </main>
 
   <script src="menu.js"></script>
-
 </body>
 </html>
